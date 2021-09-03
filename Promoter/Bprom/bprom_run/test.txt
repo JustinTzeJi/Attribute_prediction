@@ -1,0 +1,4 @@
+>BPS_RS18530 <unknown description>                                              
+ Length of sequence-       414
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      0
