@@ -1,0 +1,28 @@
+samples:
+  NC_006350.1: 'NC_006350.1'
+
+output:
+  directory: '/home/justin/Master/Attribute_prediction/Results'
+  entrez_email: '20110040@perdanauniversity.edu.my'
+
+pathofact:
+  project: PathoFact_results # requires user input
+  size_fasta: 10000 #Adjustable to preference
+  scripts: "scripts"
+  signalp: "/home/justin/Master/Attribute_prediction/PathoFact/signalp-5.0b/bin" # requires user input
+  deepvirfinder: "/home/justin/Master/Attribute_prediction/PathoFact/submodules/DeepVirFinder/dvf.py"
+  tox_hmm: "/home/justin/Master/Attribute_prediction/PathoFact/databases/toxins/combined_Toxin.hmm"
+  tox_lib: "/home/justin/Master/Attribute_prediction/PathoFact/databases/library_HMM_Toxins.csv"
+  tox_threshold: 40 #Bitscore threshold of the toxin prediction, adjustable by user to preference
+  vir_hmm: "/home/justin/Master/Attribute_prediction/PathoFact/databases/virulence/Virulence_factor.hmm"
+  vir_domains: "/home/justin/Master/Attribute_prediction/PathoFact/databases/models_and_domains"
+  plasflow_threshold: 0.7
+  plasflow_minlen: 1000
+  runtime:
+    short: "00:10:00"
+    medium: "01:00:00"
+    long: "02:00:00"
+  mem:
+    normal_mem_per_core_gb: "4G"
+    big_mem_cores: 4
+    big_mem_per_core_gb: "30G"
