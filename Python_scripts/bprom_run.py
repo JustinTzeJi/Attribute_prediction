@@ -10,7 +10,7 @@ def argument_parser(version=None):
     parser = argparse.ArgumentParser()
     parser.add_argument('-i', '--input_file', required=True, 
                         help='Input Fasta with upstream') 
-    parser.add_argument('-0', '--output_file', required=True, 
+    parser.add_argument('-o', '--output_file', required=True, 
                         help='Output csv') 
     return parser
 
