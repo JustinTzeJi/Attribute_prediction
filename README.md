@@ -1,4 +1,4 @@
-# [WIP] Gene Attribute (regultory) Prediction Pipeline 
+# [WIP] Gene Attribute (regulatory) Prediction Pipeline 
 *part of my MSc project 
 
 ## Current workflow:
