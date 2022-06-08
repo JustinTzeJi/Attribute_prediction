@@ -11,5 +11,7 @@ rule deeptf_execute:
         expand(os.path.join(DATA_DIR,"{sample}_protein.fasta"), sample=config["samples"])
     output:
         expand(os.path.join(DATA_DIR,"deeptf_{sample}.csv"), sample=config["samples"])
+    conda:
+        "/home/justin/Master/Attribute_prediction/yamlfiles/deeptfactor.yml"
     shell:
-        "python ../Python_scripts/deeptf_run.py -i {input} -o {output}"
+        "python ./Python_scripts/deeptf_run.py -i {input} -o {output}"

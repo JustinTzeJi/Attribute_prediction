@@ -7,7 +7,7 @@ def argument_parser(version=None):
     parser = argparse.ArgumentParser()
     parser.add_argument('-i', '--input_file', required=True, 
                         help='Input Protein Fasta') 
-    parser.add_argument('-0', '--output_file', required=True, 
+    parser.add_argument('-o', '--output_file', required=True, 
                         help='Output csv') 
     return parser
 
@@ -19,5 +19,5 @@ if __name__ == '__main__':
     output = options.output_file
 
     df = deeptf(input)
-
-    df[df['Score'] == df.groupby('Gene Locus')['Score'].transform('max')].to_csv(output, index = False)
+    res = df.groupby(['Gene Locus']).max().reset_index(level=0)
+    res.to_csv(output, index = False)

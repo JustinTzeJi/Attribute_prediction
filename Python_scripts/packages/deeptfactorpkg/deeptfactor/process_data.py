@@ -14,7 +14,7 @@ def read_fasta_data(fasta_file, len_criteria=1000):
             seq_id = seq_record.id
             seq_slice = seq_record.description
             if len(seq) <= len_criteria:
-                seq = seq.replace("U", "X")
+                seq = str(seq).replace("U", "X")
                 seq += '_' * (len_criteria-len(seq))
                 result.append(str(seq))
                 seq_ids.append(seq_id)

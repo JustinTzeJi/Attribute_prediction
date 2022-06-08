@@ -41,9 +41,9 @@ if __name__ == '__main__':
             promoter_str = int(handle.read().splitlines()[3].split('-', 1)[1].strip())
             # print (promoter_str)
             if promoter_str > 0:
-                promoter = 1
+                promoter = promoter_str
             elif promoter_str == 0:
-                promoter = 0
+                promoter = promoter_str
             else:
                 promoter = 'No result from BPROM'
             df = df.append({'Gene Locus': locus, 'Promoter': promoter}, ignore_index=True)

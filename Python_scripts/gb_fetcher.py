@@ -24,7 +24,7 @@ if __name__ == '__main__':
 
     handle = Entrez.efetch(db= 'nuccore', id = acc_id, rettype = "gbwithparts", retmode = "text")
 
-    with open(output, 'w') as out_handle:
-        out_handle.write(handle.read())
+    ##with open(output, 'w') as out_handle:
+    ##    out_handle.write(handle.read())
     
     print(acc_id + ".gb saved")

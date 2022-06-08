@@ -12,4 +12,4 @@ rule bprom_execute:
     output:
         expand(os.path.join(DATA_DIR,"bprom_{sample}.csv"), sample=config["samples"])
     shell:
-        "python ../Python_scripts/bprom_run.py -i {input} -o {output}"
+        "python ./Python_scripts/bprom_run.py -i {input} -o {output}"

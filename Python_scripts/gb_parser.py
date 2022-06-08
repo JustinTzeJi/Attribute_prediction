@@ -95,7 +95,7 @@ if __name__ == '__main__':
                     protein.append(protein_rec)
                 else:
                     translated_seq = Seq('MMMMMMMM')
-                    protein_rec = SeqRecord(seq, id=locus, description = "%s" %slices)
+                    protein_rec = SeqRecord(translated_seq, id=locus, description = "%s" %slices)
                     protein.append(protein_rec)            
 
     SeqIO.write(fna, open(output_fna, "w"), "fasta")

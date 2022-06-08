@@ -20,7 +20,7 @@ rule gb_fetch:
     params:
         email = config["output"]["entrez_email"]
     shell:
-        "python ../Python_scripts/gb_fetcher.py -i {input} -o {output} -e {params.email}"
+        "python ./Python_scripts/gb_fetcher.py -i {input} -o {output} -e {params.email}"
 
 
 rule gb_parser:
@@ -31,4 +31,4 @@ rule gb_parser:
         protein = expand(os.path.join(DATA_DIR,"{sample}_protein.fasta"), sample=config["samples"]),
         fna = expand(os.path.join(DATA_DIR,"{sample}.fna"), sample=config["samples"])
     shell:
-        "python ../Python_scripts/gb_parser.py -i {input} -ou {output.upstream} -op {output.protein} -of {output.fna}"
+        "python ./Python_scripts/gb_parser.py -i {input} -ou {output.upstream} -op {output.protein} -of {output.fna}"
